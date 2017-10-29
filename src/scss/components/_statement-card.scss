@@ -20,30 +20,31 @@
 
 .statement-card__profile-pic {
     padding-bottom: 10px;
+    border-radius: $border-radius-size;
+    overflow: hidden;
+    width: 40px;
 
     img {
-        width: 40px;
+        display: block;
+        width: 100%;
+        border-radius: $border-radius-size;
     }
 
     @media (min-width: $tablet-breakpoint) {
         padding-bottom: 20px;
-
-        img {
-            width: 60px;
-        }
+        width: 60px;
     }
 
     @media (min-width: $desktop-breakpoint) {
-        img {
-            width: 80px;
-        }
+        width: 80px;
     }
 }
 
 .statement-card__content {
-    flex-grow: 1;
     border-bottom: 1px solid $border-colour;
     margin-left: 10px;
+    width: calc(100% - 50px);
+    padding-bottom: 10px;
 
     h4, p {
         margin: 0;
@@ -55,7 +56,9 @@
     }
 
     @media (min-width: $tablet-breakpoint) {
+        padding-bottom: 20px;
         margin-left: 20px;
+        width: calc(100% - 80px);
 
         h4 {
             font-size: 16px;
@@ -64,6 +67,7 @@
 
     @media (min-width: $desktop-breakpoint) {
         margin-left: 30px;
+        width: calc(100% - 110px);
 
         h4 {
             font-size: 24px;

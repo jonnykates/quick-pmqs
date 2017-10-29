@@ -9,7 +9,7 @@
         {{.Content}}
 
         <div class="body-column">
-            {{ range where .Site.Pages ".Params.debateid" (.Params.id) }}
+            {{ range where .Site.Pages.ByTitle ".Params.debateid" (.Params.id) }}
                 {{ partial "statement-card.html" . }}
             {{ end }}
         </div>

@@ -1,5 +1,5 @@
 <ul class="recent-debates tile-grid">
-    {{ range .Pages }}
+    {{ range (.Pages.ByParam "id").Reverse }}
         <li>
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <div class="recent-debate__date">
