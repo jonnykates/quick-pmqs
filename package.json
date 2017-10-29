@@ -1,0 +1,28 @@
+{
+  "name": "quickpmqs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill-others \"gulp watch\" \"hugo server -D\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/jfk/quickpmqs.git"
+  },
+  "author": "Jonny Kates",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jfk/quickpmqs#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "concurrently": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11"
+  }
+}

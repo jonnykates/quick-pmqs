@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+    <div class="main-container homepage">
+
+        <div class="half-column">
+
+            {{ range first 1 (where .Data.Pages "Type" "debates") }}
+                <div class="debate-cover-tile" style="background-image: url('/images/debate-cover-images/{{ .Params.id }}.jpg');">
+                    <ul class="topics-tag-list">
+                        {{ range .Params.topics }}
+                            <li><a href="{{ "/topics/" }}{{ . | urlize }}" class="topics-tag-list__topic--{{ . | urlize }}">{{ . }}</a></li>
+                        {{ end }}
+                    </ul>
+                    <div class="debate-cover-tile__headings">
+                        <h4>{{ .Params.title }}</h4>
+                        <h2>{{ .Params.covertitle }}</h2>
+                    </div>
+                    <a class="debate-cover__faux-link-overlay" href="{{.Permalink}}"></a>
+                </div>
+                <!-- Set our Scratch variable for the most recent debate's ID -->
+                {{ $.Scratch.Add "mostRecentDebateId" .Params.id }}
+            {{ end }}
+
+        </div>
+
+        <div class="half-column">
+
+            <div class="recent-statements section-heading">
+                {{ range first 1 (where .Data.Pages ".Params.debateid" ($.Scratch.Get "mostRecentDebateId")) }}
+                <h3>Recent question</h3>
+                <a class="pagination-link pagination-link--next" href="{{ $.Scratch.Get "mostRecentDebatePermalink" }}">View full debate</a>
+                    {{ partial "statement-card.html" . }}
+                    {{ partial "statement-card.html" .Next }}
+                {{ end }}
+            </div>
+
+        </div>
+
+        <div class="section-heading" >
+            <h3><a href="/debates">Recent debates</a></h3>
+            <a class="pagination-link pagination-link--next" href="/debates">Browse all debates</a>
+        </div>
+        <ul class="recent-debates tile-grid">
+            {{ range first 4 (where .Data.Pages "Type" "debates") }}
+                <li>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <div class="recent-debate__date">
+                        <h3>{{ substr .Title 0 -5 }}</h3>
+                        <span>{{ substr .Title -1 4 }}</span>
+                    </div>
+                    <a class="recent-debates__faux-link-overlay" href="{{.Permalink}}"></a>
+                </li>
+            {{ end }}
+        </ul>
+
+        <div class="section-heading">
+            <h3><a href="/topics">Browse by recent topics</a></h3>
+            <a class="pagination-link pagination-link--next" href="/topics">Browse all topics</a>
+        </div>
+
+        <!-- Need to limit this to 4 - I think the only way is with CSS! -->
+        {{ partial "topics-grid.html" . }}
+
+    </div>
+
+{{ end }}

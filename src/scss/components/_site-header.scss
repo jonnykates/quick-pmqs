@@ -1,0 +1,109 @@
+.site-header {
+    background-color: $black;
+    color: $white;
+    padding: 0;
+    position: relative;
+
+    @media (min-width: $tablet-breakpoint) {
+        padding: 20px 0;
+    }
+
+    .main-container {
+        padding-left: 0px;
+        padding-right: 0px;
+        align-items: center;
+        @media (min-width: $tablet-breakpoint) {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+}
+
+.site-header__logo {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+
+    @media (min-width: $tablet-breakpoint) {
+        padding: 0;
+        width: auto;
+        text-align: left;
+    }
+}
+
+.site-header__actions {
+    flex-grow: 1;
+    text-align: right;
+
+    .button--ghost {
+        display: none;
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+        .button--ghost {
+            display: inline-block; // This is the latest debates button
+        }
+    }
+}
+
+.main-navigation {
+    background-color: $orange;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: left;
+    font-size: 1.5em;
+    z-index: 10;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-duration $transition-curve;
+
+    li {
+        display: block;
+        border-bottom: 1px solid lighten($orange, 10%);
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+    }
+
+    a {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $site-max-width;
+        display: block;
+        padding: 20px 14px;
+        color: $white;
+        font-family: $heading-font;
+    }
+}
+
+.site-header__navicon {
+    display: block;
+    border-radius: 0px;
+    text-align: left;
+
+    @media (min-width: $tablet-breakpoint) {
+        display: inline-block;
+        border-radius: $border-radius-size;
+    }
+}
+
+.site-header__navicon:before {
+    content: '\f0c9';
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    margin-right: 6px;
+}
+
+.site-header.navigation-open {
+    .main-navigation {
+        max-height: 400px;
+    }
+
+    .site-header__navicon:before {
+        content: '\f00d';
+    }
+}

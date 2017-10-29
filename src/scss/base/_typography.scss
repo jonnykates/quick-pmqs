@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,900|Open+Sans');
+
+html, body {
+    font-family: $main-font;
+    color: $black;
+    background-color: $white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    display: block;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 36px;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 48px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 72px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 40px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 60px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 32px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 48px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 24px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 36px;
+    }
+}
+
+h5 {
+    font-weight: 400;
+    font-style: italic;
+}
+
+p, h5 {
+    font-size: 14px;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 16px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        font-size: 18px;
+    }
+}
+
+a {
+    color: $link-colour;
+    text-decoration: none;
+    &:hover {
+        color: darken($link-colour, 10%);
+        text-decoration: underline;
+    }
+}
+
+hr {
+    width: 100%;
+    margin: 20px 0;
+}
+
+// Pagination link
+
+.pagination-link {
+    font-family: $heading-font;
+    font-size: 14px;
+    font-style: italic;
+    color: $medium-grey;
+
+    @media (min-width: $tablet-breakpoint) {
+        font-size: 16px;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.pagination-link--next:after, .pagination-link--prev:before {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+.pagination-link--next:after {
+    content: '\f138';
+    margin-left: 0.4em;
+}
+
+.pagination-link--prev:before {
+    content: '\f137';
+    margin-right: 0.4em;
+}
+
+// Section heading
+.section-heading {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid $border-colour;
+    margin-bottom: 16px;
+    margin-top: 10px;
+
+    @media (min-width: $tablet-breakpoint) {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    > h3, > a {
+        width: 50%;
+    }
+
+    > a {
+        text-align: right;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 0;
+
+        @media (min-width: $tablet-breakpoint) {
+            font-size: 24px;
+        }
+
+        a {
+            color: $black;
+            &:hover {
+                text-decoration: none;
+                color: $orange;
+            }
+        }
+    }
+}

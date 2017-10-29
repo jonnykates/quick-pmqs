@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <script src="https://use.fontawesome.com/ca79de5bc0.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <!-- Set the most recent debate url -->
+    {{ range first 1 (where .Data.Pages "Type" "debates") }}
+        {{ $.Scratch.Add "mostRecentDebatePermalink" .Permalink }}
+    {{ end }}
+
+
+    {{ partial "site-header.html" . }}
+
+    <div class="page-header">
+        <div class="main-container">
+            <div class="page-header__breadcrumb">
+                {{ block "breadcrumb" . }}{{ end }}
+            </div>
+            {{ if .IsHome }}
+                <p>{{ .Site.Params.description }}</p>
+            {{ else }}
+                <h1>{{ .Title }}</h1>
+            {{ end }}
+        </div>
+    </div>
+
+    {{ block "main" . }}
+
+    {{end}}
+
+    {{ partial "site-footer.html" . }}
+
+    <script>
+        var navicon = document.getElementById('navicon');
+        var siteHeader = document.getElementById('site-header');
+
+        function menuToggle() {
+            siteHeader.classList.toggle('navigation-closed');
+            siteHeader.classList.toggle('navigation-open');
+        }
+
+        navicon.addEventListener('click', menuToggle);
+    </script>
+
+</body>

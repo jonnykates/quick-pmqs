@@ -1,0 +1,13 @@
+{{ define "breadcrumb" }}
+    <a href="/">Home</a>
+{{ end }}
+
+{{ define "main" }}
+    <div class="main-container">
+
+        {{ .Content }}
+
+        {{ partial "topics-grid.html" . }}
+
+    </div>
+{{ end }}

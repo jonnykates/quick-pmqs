@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin-bottom: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-padding-start: 0;
+}
+
+// Colours
+$orange: #F47A20;
+$black: #333333;
+$white: #ffffff;
+$light-grey: #F5F5F5;
+$medium-grey: #B7B7B7;
+$border-colour: #dedede;
+
+// Topic colours
+$education-colour: #30B681;
+$housing-colour: #DF3CDF;
+
+// Topics tag list index
+$tagList: (
+    education   $education-colour   darken($education-colour, 10%),
+    housing     $housing-colour     darken($housing-colour, 10%)
+);
+
+// Typography
+$heading-font: 'Merriweather', serif;
+$main-font: 'Open Sans', sans-serif;
+$link-colour: $orange;
+
+$site-max-width: 1040px;
+
+$border-radius-size: 4px;
+
+// Breakpoints
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 992px;
+
+// Transitions
+$transition-duration: .7s;
+$transition-curve: ease-in-out;

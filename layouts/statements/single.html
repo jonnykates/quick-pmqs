@@ -1,0 +1,15 @@
+{{ define "main" }}
+    layouts/statements/single.html
+
+    <h1>{{.Params.leader}}</h1>
+    <p>{{.Content}}</p>
+    <p>{{.Params.prettydate}}</p>
+
+    {{ if .Params.topics }}
+        <ul>
+            {{ range .Params.topics }}
+                <li><a href="{{ "/topics/" }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+        </ul>
+    {{ end }}
+{{ end }}

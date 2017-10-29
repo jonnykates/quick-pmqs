@@ -1,0 +1,22 @@
+<div class="debate-sidebar">
+    <h5>Topics debated</h5>
+    <ul class="topics-tag-list">
+        {{ range .Params.topics }}
+            <li><a href="{{ "/topics/" }}{{ . | urlize }}" class="topics-tag-list__topic--{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+
+    <ul class="debate-sidebar__meta-list">
+        {{ if isset .Params "debatesource" }}
+            <li><a href="{{ .Params.debatesource }}"><i class="fa fa-external-link" aria-hidden="true"></i> View source for this debate</a></li>
+        {{ end }}
+
+        {{ if isset .Params "debatevideo" }}
+            <li><a href="{{ .Params.debatevideo }}"><i class="fa fa-youtube-play" aria-hidden="true"></i> Watch this debate</a></li>
+        {{ end }}
+
+        <li><a><i class="fa fa-share-alt-square" aria-hidden="true"></i> Share this debate</a></li>
+        <li><a><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Suggest a change</a></li>
+    </ul>
+
+</div>

@@ -1,0 +1,53 @@
+.tile-grid {
+    width: 100%;
+    display: flex; // todo: this could be grid
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+        position: relative;
+        border-radius: $border-radius-size;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: $tablet-breakpoint) {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            width: calc( (100% - (20px * 2)) / 3 ); // 3 cols
+
+            &:nth-child(3n) {
+                margin-right: 0px; // End of row
+            }
+        }
+
+        @media (min-width: $desktop-breakpoint) {
+            margin-bottom: 40px;
+            margin-right: 40px;
+            width: calc( (100% - (40px * 3)) / 4 ); // 4 cols
+            height: calc( (#{$site-max-width} - (40px * 3)) / 4 ); // square
+
+            &:nth-child(3n) {
+                margin-right: 40px; // Reintroduce this
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0px; // End of row
+            }
+        }
+    }
+}
+
+.homepage .tile-grid li {
+    @media (min-width: $tablet-breakpoint) {
+        margin-bottom: 0px;
+
+        &:nth-child(n+4) {
+            display: none; // Only show 3
+        }
+    }
+}

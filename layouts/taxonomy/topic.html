@@ -1,0 +1,16 @@
+{{ define "breadcrumb" }}
+    <a href="/">Home</a>
+    <a href="/topics">Topics</a>
+{{ end }}
+
+{{ define "main" }}
+    <div class="main-container">
+
+        {{ .Content }}
+
+        <p>Below are the debates which involved the leaders discussing {{ lower .Title }}.</p>
+
+        {{ partial "recent-debates.html" . }}
+
+    </div>
+{{ end }}

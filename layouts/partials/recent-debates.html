@@ -1,0 +1,12 @@
+<ul class="recent-debates tile-grid">
+    {{ range .Pages }}
+        <li>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <div class="recent-debate__date">
+                <h3>{{ substr .Title 0 -5 }}</h3>
+                <span>{{ substr .Title -1 4 }}</span>
+            </div>
+            <a class="recent-debates__faux-link-overlay" href="{{.Permalink}}"></a>
+        </li>
+    {{ end }}
+</ul>

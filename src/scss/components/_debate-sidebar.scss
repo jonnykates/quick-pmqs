@@ -1,0 +1,48 @@
+.debate-sidebar {
+    background-color: $light-grey;
+    padding: 16px;
+
+    h5 {
+        margin: 0 0 10px;
+        color: $medium-grey;
+    }
+
+    .topics-tag-list {
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet-breakpoint) {
+        padding: 20px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        padding: 30px;
+    }
+}
+
+.debate-sidebar__meta-list {
+    list-style: none;
+    font-family: $heading-font;
+
+    li {
+        padding: 10px 0;
+        border-top: 1px dashed $border-colour;
+
+        &:last-child {
+            border-bottom: 1px dashed $border-colour;
+        }
+
+        a {
+            display: flex;
+        }
+
+        i {
+            width: 20px;
+            margin-right: 8px;
+        }
+    }
+
+    a {
+        color: $black;
+    }
+}

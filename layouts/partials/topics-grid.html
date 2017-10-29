@@ -1,0 +1,10 @@
+<ul class="topics-grid tile-grid">
+    {{ range $key, $taxonomy := .Site.Taxonomies.topics }}
+        <li class="topics-grid__topic--{{ $key }}">
+            <div class="topics-grid__background-image"></div>
+            <div class="topics-grid__background-overlay"></div>
+            <h3>{{ humanize $key }}</h3>
+            <a class="topics-grid__faux-link-overlay" href="{{ "/topics/" }}{{ $key }}"></a>
+        </li>
+    {{ end }}
+</ul>

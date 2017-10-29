@@ -1,0 +1,9 @@
+<div class="statement-card">
+    <div class="statement-card__profile-pic">
+        <img src="/images/leader-profile-pics/{{ .Params.leader | urlize }}.png" alt="{{ .Params.leader }}" />
+    </div>
+    <div class="statement-card__content">
+        <h4>{{ .Params.leader }}</h4>
+        <p>{{ .Content }}</p>
+    </div>
+</div>

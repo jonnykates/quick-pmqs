@@ -1,0 +1,22 @@
+{{ define "breadcrumb" }}
+    <a href="/">Home</a>
+    <a href="/debates">Debates</a>
+{{ end }}
+
+{{ define "main" }}
+
+    <div class="main-container main-container--no-gutter">
+        {{.Content}}
+
+        <div class="body-column">
+            {{ range where .Site.Pages ".Params.debateid" (.Params.id) }}
+                {{ partial "statement-card.html" . }}
+            {{ end }}
+        </div>
+
+        <aside class="sidebar-column">
+            {{ partial "debate-sidebar.html" . }}
+        </aside>
+    </div>
+
+{{ end }}

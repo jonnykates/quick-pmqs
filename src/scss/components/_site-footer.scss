@@ -1,0 +1,14 @@
+.site-footer {
+    background-color: $black;
+    color: $white;
+    padding: 20px 0;
+    margin-top: 40px;
+
+    @media (min-width: $tablet-breakpoint) {
+        margin-top: 60px;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+        margin-top: 80px;
+    }
+}

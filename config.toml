@@ -1,0 +1,11 @@
+baseURL = "http://quickpmqs.co.uk"
+languageCode = "en-gb"
+title = "Quick PMQs"
+
+[params]
+    description = "Quick PMQs summarises Prime Minister’s Questions, without the political rhetoric or personal attacks"
+
+[taxonomies]
+    tags = "tags"
+    category = "categories"
+    topic = "topics"

@@ -1,0 +1,63 @@
+.page-header {
+    background-color: $light-grey;
+    padding: 30px 0;
+
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-breakpoint) {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        margin: 10px 0 0;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    p {
+        font-family: $heading-font;
+        line-height: 1.4;
+        font-weight: normal;
+        font-size: 18px;
+
+        @media (min-width: $tablet-breakpoint) {
+            font-size: 24px;
+        }
+
+        @media (min-width: $desktop-breakpoint) {
+            font-size: 36px;
+        }
+    }
+}
+
+.page-header__breadcrumb {
+    font-family: $heading-font;
+    font-weight: bold;
+    a {
+        color: $black;
+        font-size: 14px;
+        margin-right: 6px;
+
+        @media (min-width: $tablet-breakpoint) {
+            font-size: 16px;
+        }
+
+        &:after {
+            content: '\f0da';
+            font-family: 'FontAwesome';
+            font-weight: normal;
+            margin-left: 6px;
+        }
+
+        &:hover {
+            color: $orange;
+            text-decoration: none;
+
+            &:after {
+                color: $black;
+            }
+        }
+    }
+}

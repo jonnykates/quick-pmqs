@@ -1,0 +1,14 @@
+{{ define "breadcrumb" }}
+    <a href="/">Home</a>
+{{ end }}
+
+{{ define "main" }}
+    <div class="main-container">
+
+        {{ .Content }}
+        <p>Select a date from the list below to see the Prime Minister's Questions debate from that day.</p>
+
+        {{ partial "recent-debates.html" . }}
+
+    </div>
+{{ end }}
