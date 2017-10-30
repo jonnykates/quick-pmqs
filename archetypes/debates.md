@@ -6,6 +6,6 @@ debatesource: ""
 debatevideo: ""
 topics: [""]
 covertitle: ""
-draft: true
+draft: false
 ---
 

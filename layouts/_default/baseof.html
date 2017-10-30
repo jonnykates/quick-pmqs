@@ -13,6 +13,7 @@
 <body>
 
     <!-- Set the most recent debate url -->
+    <!-- This doesn't work! -->
     {{ range first 1 (where .Data.Pages "Type" "debates") }}
         {{ $.Scratch.Add "mostRecentDebatePermalink" .Permalink }}
     {{ end }}
