@@ -11,4 +11,29 @@
     @media (min-width: $desktop-breakpoint) {
         margin-top: 80px;
     }
+
+    ul.footerNav {
+        list-style: none;
+        flex-grow: 1;
+
+        li {
+            display: inline-block;
+            padding-right: 1em;
+
+            a {
+                color: $white;
+                font-family: $heading-font;
+
+                &:hover {
+                    color: $orange;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: .85em;
+        opacity: .75;
+    }
 }
