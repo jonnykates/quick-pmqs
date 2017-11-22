@@ -9,9 +9,15 @@
         {{.Content}}
 
         <div class="body-column">
-            {{ range where .Site.Pages.ByTitle ".Params.debateid" (.Params.id) }}
-                {{ partial "statement-card.html" . }}
-            {{ end }}
+            {{ partial "debate-pagination.html" . }}
+
+            <div class="statement-cards">
+                {{ range where .Site.Pages.ByTitle ".Params.debateid" (.Params.id) }}
+                    {{ partial "statement-card.html" . }}
+                {{ end }}
+            </div>
+
+            {{ partial "debate-pagination.html" . }}
         </div>
 
         <aside class="sidebar-column">

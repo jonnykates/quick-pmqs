@@ -1,0 +1,8 @@
+.debate-pagination {
+    display: flex;
+    justify-content: space-between;
+
+    a.pagination-link--disabled {
+        display: none;
+    }
+}

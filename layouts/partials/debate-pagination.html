@@ -1,0 +1,4 @@
+<div class="debate-pagination">
+    <a class="pagination-link pagination-link--prev {{if not .PrevInSection}}pagination-link--disabled{{end}}" href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Previous debate</a>
+    <a class="pagination-link pagination-link--next {{if not .NextInSection}}pagination-link--disabled{{end}}" href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Next debate</a>
+</div>

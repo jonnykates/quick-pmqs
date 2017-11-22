@@ -1,3 +1,11 @@
+.statement-cards {
+    margin: 8px 0;
+
+    @media (min-width: $tablet-breakpoint) {
+        margin: 12px 0;
+    }
+}
+
 .statement-card {
     display: flex;
     padding-top: 10px;
