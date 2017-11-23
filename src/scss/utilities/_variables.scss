@@ -19,15 +19,29 @@ $border-colour: #dedede;
 
 // Topic colours
 $education-colour: #30B681;
-$housing-colour: #DF3CDF;
-// $employment-colour
-// $disability-colour
-// $healthcare-colour
+$housing-colour: #EB5757;
+$brexit-colour: #314CB5;
+$employment-colour: #7CB6BC;
+$disability-colour: #FCD80C;
+$healthcare-colour: #9B51E0;
 // $welfare-colour
+// $tax-colour
+// $security-colour
+$crime-colour: #528BF7;
+$environment-colour: #219653;
+$energy-colour: #C67255;
 
 // Topics tag list index
 $tagList: (
     education   $education-colour   darken($education-colour, 10%),
+    housing     $housing-colour     darken($housing-colour, 10%),
+    brexit      $brexit-colour      darken($brexit-colour, 10%),
+    crime       $crime-colour       darken($crime-colour, 10%),
+    disability  $disability-colour  darken($disability-colour, 10%),
+    employment  $employment-colour  darken($employment-colour, 10%),
+    energy      $energy-colour      darken($energy-colour, 10%),
+    environment $environment-colour darken($environment-colour, 10%),
+    healthcare  $healthcare-colour  darken($healthcare-colour, 10%),
     housing     $housing-colour     darken($housing-colour, 10%)
 );
 

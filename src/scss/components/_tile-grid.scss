@@ -50,4 +50,16 @@
             display: none; // Only show 3
         }
     }
+
+    @media (min-width: $desktop-breakpoint) {
+        &:nth-child(n+4) {
+            display: flex;
+        }
+    }
+}
+
+.homepage .tile-grid.topics-grid li {
+    &:nth-child(n+5) {
+        display: none;
+    }
 }
