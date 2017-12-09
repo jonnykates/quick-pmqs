@@ -20,8 +20,8 @@ My motivation is to provide a clear and impartial summary of PMQs whilst highlig
 
 This is the second full version of Quick PMQs, which started life as a simple AngularJS experiment. This version is built using [Hugo](https://gohugo.io); a static site framework. As a frontend developer, I wanted to experiment with Hugo and this personal side project provided a great excuse.
 
-You can follow and contribute to Quick PMQs' development via [GitHub](/).
+You can follow and contribute to Quick PMQs' development via [GitHub](https://github.com/jonnykates/quick-pmqs).
 
 <ul class="devLog">
-    <li><strong>2.0.0</strong> - Version 2 is live! (21/11/2017)</li>
+    <li><strong>2.0.0</strong> - Version 2 is live! (09/12/2017)</li>
 </ul>
