@@ -24,9 +24,9 @@ $brexit-colour: #314CB5;
 $employment-colour: #7CB6BC;
 $disability-colour: #FCD80C;
 $healthcare-colour: #9B51E0;
-// $welfare-colour
-// $tax-colour
-// $security-colour
+$welfare-colour: #F2994A;
+$tax-colour: #F2CAAB;
+$security-colour: #A59C5C;
 $crime-colour: #528BF7;
 $environment-colour: #219653;
 $energy-colour: #C67255;
@@ -42,7 +42,10 @@ $tagList: (
     energy      $energy-colour      darken($energy-colour, 10%),
     environment $environment-colour darken($environment-colour, 10%),
     healthcare  $healthcare-colour  darken($healthcare-colour, 10%),
-    housing     $housing-colour     darken($housing-colour, 10%)
+    housing     $housing-colour     darken($housing-colour, 10%),
+    security    $security-colour    darken($security-colour, 10%),
+    tax         $tax-colour         darken($tax-colour, 10%),
+    welfare     $welfare-colour     darken($welfare-colour, 10%)
 );
 
 // Typography

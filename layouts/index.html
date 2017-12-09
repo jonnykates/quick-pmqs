@@ -26,11 +26,10 @@
         <div class="half-column">
 
             <div class="recent-statements section-heading">
-                {{ range first 1 (where .Data.Pages ".Params.debateid" ($.Scratch.Get "mostRecentDebateId")) }}
                 <h3>Recent question</h3>
                 <a class="pagination-link pagination-link--next" href="{{ $.Scratch.Get "mostRecentDebatePermalink" }}">View full debate</a>
+                {{ range first 2 (where .Site.Pages.ByTitle ".Params.debateid" ($.Scratch.Get "mostRecentDebateId")) }}
                     {{ partial "statement-card.html" . }}
-                    {{ partial "statement-card.html" .Next }}
                 {{ end }}
             </div>
 
