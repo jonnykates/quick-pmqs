@@ -6,6 +6,8 @@
 */.sass-cache/
 /.sass-cache/
 
-## Node 
+## Node
 node_modules/
 npm-debug.log
+
+/public
