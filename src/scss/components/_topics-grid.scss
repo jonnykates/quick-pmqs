@@ -35,7 +35,7 @@
 
         .topics-grid__background-image {
             @media (min-width: $desktop-breakpoint) {
-                background-image: url('/images/topic-cover-images/#{nth($value, 1)}.png');
+                background-image: url('/images/topic-cover-images/#{nth($value, 1)}.jpg');
             }
         }
 
