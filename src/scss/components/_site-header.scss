@@ -29,6 +29,11 @@
         width: auto;
         text-align: left;
     }
+
+    @media (max-width: 350px) {
+        text-align: left;
+        padding: 15px;
+    }
 }
 
 .site-header__actions {
@@ -37,6 +42,15 @@
 
     .twitterLink {
         margin-right: 20px;
+        position: absolute;
+        right: 0;
+        top: 25px;
+
+        @media (min-width: $tablet-breakpoint) {
+            position: relative;
+            right: auto;
+            top: auto;
+        }
     }
 
     .button--ghost {

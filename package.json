@@ -1,7 +1,7 @@
 {
   "name": "quickpmqs",
-  "version": "0.0.1",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Quick PMQs summarises Prime Minister's Questions, without the political rhetoric or personal attacks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/jfk/quickpmqs.git"
+    "url": "https://github.com/jonnykates/quick-pmqs"
   },
   "author": "Jonny Kates",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jfk/quickpmqs#readme",
+  "homepage": "https://www.quickpmqs.co.uk",
   "devDependencies": {
     "autoprefixer": "^7.1.5",
     "concurrently": "^3.5.0",
