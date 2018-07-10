@@ -30,6 +30,7 @@ $security-colour: #A59C5C;
 $crime-colour: #528BF7;
 $environment-colour: #219653;
 $energy-colour: #C67255;
+$transport-colour: #C61714;
 
 // Topics tag list index
 $tagList: (
@@ -45,7 +46,8 @@ $tagList: (
     housing     $housing-colour     darken($housing-colour, 10%),
     security    $security-colour    darken($security-colour, 10%),
     tax         $tax-colour         darken($tax-colour, 10%),
-    welfare     $welfare-colour     darken($welfare-colour, 10%)
+    welfare     $welfare-colour     darken($welfare-colour, 10%),
+    transport   $transport-colour   darken($transport-colour, 10%)
 );
 
 // Typography
