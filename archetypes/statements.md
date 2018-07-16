@@ -1,8 +1,8 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-debateid: "20171220"
-prettydate: "20th December 2017"
+debateid: "20180711"
+prettydate: "11th July 2018"
 draft: false
 leader: ""
 ---
